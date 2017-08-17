@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Galaxia: MyString
+  Diametro: MyString
+  CantidadEstrellas: 1
+  CantidadPlanetas: 1
+
+two:
+  Galaxia: MyString
+  Diametro: MyString
+  CantidadEstrellas: 1
+  CantidadPlanetas: 1

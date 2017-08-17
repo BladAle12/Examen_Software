@@ -1,0 +1,25 @@
+<%= form_for(@nebulosa) do |f| %>
+  <% if @nebulosa.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@nebulosa.errors.count, "error") %> prohibited this nebulosa from being saved:</h2>
+
+      <ul>
+      <% @nebulosa.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Nebulosa %><br>
+    <%= f.text_field :Nebulosa %>
+  </div>
+  <div class="field">
+    <%= f.label :TipoNebulosa %><br>
+    <%= f.text_field :TipoNebulosa %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

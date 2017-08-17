@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+
+<p style="text-align: justify"> Un <strong>Nebulosa</strong> son regiones del medio interestelar constituidas por gases (principalmente hidrógeno y helio) además de elementos químicos en forma de polvo cósmico.</p>
+
+
+<h1>Listing Nebulosas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nebulosa</th>
+      <th>Tiponebulosa</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @nebulosas.each do |nebulosa| %>
+      <tr>
+        <td><%= nebulosa.Nebulosa %></td>
+        <td><%= nebulosa.TipoNebulosa %></td>
+        <td><%= link_to 'Show', nebulosa %></td>
+        <td><%= link_to 'Edit', edit_nebulosa_path(nebulosa) %></td>
+        <td><%= link_to 'Destroy', nebulosa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Nebulosa', new_nebulosa_path %>

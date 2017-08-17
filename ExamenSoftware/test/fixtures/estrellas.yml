@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Estrella: MyString
+  Tamano: MyString
+  Masa: MyString
+  Volumen: MyString
+  Localizacion: MyString
+  Color: MyString
+
+two:
+  Estrella: MyString
+  Tamano: MyString
+  Masa: MyString
+  Volumen: MyString
+  Localizacion: MyString
+  Color: MyString

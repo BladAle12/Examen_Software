@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Planeta: MyString
+  Tamano: MyString
+  Masa: 1
+  Volumen: 1
+
+two:
+  Planeta: MyString
+  Tamano: MyString
+  Masa: 1
+  Volumen: 1

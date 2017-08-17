@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<p style="text-align: justify"> Un <strong>Cometa</strong> son cuerpos sólidos compuestos de materiales que se subliman en las cercanías del Sol. A gran distancia (a partir de 5-10 UA) desarrollan una atmósfera que envuelve al núcleo, llamada coma o cabellera, que está formada por gas y polvo.</p>
+
+
+<h1>Lista Cometa</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cometa</th>
+      <th>Tamano</th>
+      <th>Color</th>
+      <th>Stela</th>
+      <th>Trayectoria</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cometa.each do |cometum| %>
+      <tr>
+        <td><%= cometum.Cometa %></td>
+        <td><%= cometum.Tamano %></td>
+        <td><%= cometum.Color %></td>
+        <td><%= cometum.Stela %></td>
+        <td><%= cometum.Trayectoria %></td>
+        <td><%= link_to 'Show', cometum %></td>
+        <td><%= link_to 'Edit', edit_cometum_path(cometum) %></td>
+        <td><%= link_to 'Destroy', cometum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cometum', new_cometum_path %>

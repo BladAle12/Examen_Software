@@ -1,0 +1,41 @@
+<%= form_for(@estrella) do |f| %>
+  <% if @estrella.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@estrella.errors.count, "error") %> prohibited this estrella from being saved:</h2>
+
+      <ul>
+      <% @estrella.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Estrella %><br>
+    <%= f.text_field :Estrella %>
+  </div>
+  <div class="field">
+    <%= f.label :Tamano %><br>
+    <%= f.text_field :Tamano %>
+  </div>
+  <div class="field">
+    <%= f.label :Masa %><br>
+    <%= f.text_field :Masa %>
+  </div>
+  <div class="field">
+    <%= f.label :Volumen %><br>
+    <%= f.text_field :Volumen %>
+  </div>
+  <div class="field">
+    <%= f.label :Localizacion %><br>
+    <%= f.text_field :Localizacion %>
+  </div>
+  <div class="field">
+    <%= f.label :Color %><br>
+    <%= f.text_field :Color %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Galaxia:</strong>
+  <%= @galaxium.Galaxia %>
+</p>
+
+<p>
+  <strong>Diametro:</strong>
+  <%= @galaxium.Diametro %>
+</p>
+
+<p>
+  <strong>Cantidadestrellas:</strong>
+  <%= @galaxium.CantidadEstrellas %>
+</p>
+
+<p>
+  <strong>Cantidadplanetas:</strong>
+  <%= @galaxium.CantidadPlanetas %>
+</p>
+
+<%= link_to 'Edit', edit_galaxium_path(@galaxium) %> |
+<%= link_to 'Back', galaxia_path %>

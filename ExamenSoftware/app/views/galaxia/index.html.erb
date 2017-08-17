@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<p style="text-align: justify"> Un <strong>Galaxia</strong> Agrupación de estrellas, cuerpos celestes y materia cósmica que está concentrada en una determinada región del espacio por efecto de la atracción gravitatoria y constituye una unidad en el universo.</p>
+
+
+<h1>Listing Galaxia</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Galaxia</th>
+      <th>Diametro</th>
+      <th>Cantidadestrellas</th>
+      <th>Cantidadplanetas</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @galaxia.each do |galaxium| %>
+      <tr>
+        <td><%= galaxium.Galaxia %></td>
+        <td><%= galaxium.Diametro %></td>
+        <td><%= galaxium.CantidadEstrellas %></td>
+        <td><%= galaxium.CantidadPlanetas %></td>
+        <td><%= link_to 'Show', galaxium %></td>
+        <td><%= link_to 'Edit', edit_galaxium_path(galaxium) %></td>
+        <td><%= link_to 'Destroy', galaxium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Galaxium', new_galaxium_path %>

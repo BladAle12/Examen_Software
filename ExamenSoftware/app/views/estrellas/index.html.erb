@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p style="text-align: justify"> Un <strong>Estrella</strong> es una esfera luminosa de plasma que mantiene su forma gracias a su propia gravedad. La estrella más cercana a la Tierra es el Sol.​ Otras estrellas son visibles a simple vista desde la Tierra durante la noche, apareciendo como una diversidad de puntos luminosos fijos en el cielo debido a su inmensa distancia de la misma.</p>
+
+
+<h1>Listar Estrellas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Estrella</th>
+      <th>Tamano</th>
+      <th>Masa</th>
+      <th>Volumen</th>
+      <th>Localizacion</th>
+      <th>Color</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @estrellas.each do |estrella| %>
+      <tr>
+        <td><%= estrella.Estrella %></td>
+        <td><%= estrella.Tamano %></td>
+        <td><%= estrella.Masa %></td>
+        <td><%= estrella.Volumen %></td>
+        <td><%= estrella.Localizacion %></td>
+        <td><%= estrella.Color %></td>
+        <td><%= link_to 'Show', estrella %></td>
+        <td><%= link_to 'Edit', edit_estrella_path(estrella) %></td>
+        <td><%= link_to 'Destroy', estrella, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Estrella', new_estrella_path %>

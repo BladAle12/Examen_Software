@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Cometa: MyString
+  Tamano: MyString
+  Color: MyString
+  Stela: MyString
+  Trayectoria: MyString
+
+two:
+  Cometa: MyString
+  Tamano: MyString
+  Color: MyString
+  Stela: MyString
+  Trayectoria: MyString

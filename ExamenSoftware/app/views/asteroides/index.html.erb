@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<p style="text-align: justify"> Un <strong>Asteroide</strong> Planeta de poco volumen cuya órbita se encuentra entre las de Marte y Júpiter.</p>
+
+<h1>Lista Asteroides</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Asteroide</th>
+      <th>Tamaño</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @asteroides.each do |asteroide| %>
+      <tr>
+        <td><%= asteroide.Asteroide %></td>
+        <td><%= asteroide.Tamano %></td>
+        <td><%= link_to 'Show', asteroide %></td>
+        <td><%= link_to 'Edit', edit_asteroide_path(asteroide) %></td>
+        <td><%= link_to 'Destroy', asteroide, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Asteroide', new_asteroide_path %>

@@ -1,0 +1,33 @@
+<%= form_for(@galaxium) do |f| %>
+  <% if @galaxium.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@galaxium.errors.count, "error") %> prohibited this galaxium from being saved:</h2>
+
+      <ul>
+      <% @galaxium.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Galaxia %><br>
+    <%= f.text_field :Galaxia %>
+  </div>
+  <div class="field">
+    <%= f.label :Diametro %><br>
+    <%= f.text_field :Diametro %>
+  </div>
+  <div class="field">
+    <%= f.label :CantidadEstrellas %><br>
+    <%= f.number_field :CantidadEstrellas %>
+  </div>
+  <div class="field">
+    <%= f.label :CantidadPlanetas %><br>
+    <%= f.number_field :CantidadPlanetas %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

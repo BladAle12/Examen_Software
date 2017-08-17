@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<p style="text-align: justify"> Un <strong>Planeta</strong> Cuerpo celeste sólido que gira alrededor de una estrella y que no emite luz propia.</p>
+
+
+<h1>Lista de Planetas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Planeta</th>
+      <th>Tamaño</th>
+      <th>Masa</th>
+      <th>Volumen</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @planeta.each do |planetum| %>
+      <tr>
+        <td><%= planetum.Planeta %></td>
+        <td><%= planetum.Tamano %></td>
+        <td><%= planetum.Masa %></td>
+        <td><%= planetum.Volumen %></td>
+        <td><%= link_to 'Show', planetum %></td>
+        <td><%= link_to 'Edit', edit_planetum_path(planetum) %></td>
+        <td><%= link_to 'Destroy', planetum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nuevo Planeta', new_planetum_path %>
